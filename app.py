@@ -39,3 +39,9 @@ if uploaded_file is not None:
                 st.write(response.text)
             except Exception as e:
                 st.error(f"분석 중 오류가 발생했습니다: {e}")
+import streamlit as st
+import google.generativeai as genai
+
+# 직접 키를 적는 대신 Secrets에서 가져오도록 수정
+api_key = st.secrets["GEMINI_API_KEY"]
+genai.configure(api_key=api_key)
