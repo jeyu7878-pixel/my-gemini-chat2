@@ -8,7 +8,7 @@ st.set_page_config(page_title="AI 건강 리포트", page_icon="🩺")
 # 2. API 및 모델 설정
 api_key = st.secrets["GEMINI_API_KEY"]
 genai.configure(api_key=api_key)
-model = genai.GenerativeModel('gemini-1.5-flash')
+model = genai.GenerativeModel('gemini-2.5-flash')
 
 # 제목 및 세련된 문구
 st.title("🩺 AI 개인 건강 인사이트")
