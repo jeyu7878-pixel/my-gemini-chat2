@@ -43,7 +43,9 @@ if uploaded_file is not None:
 
                 # --- 여기서부터 카톡 공유용 복사 기능 ---
                 summary_text = f"🩺 AI 건강검진 해석 결과\n\n{response.text[:100]}...\n\n자세한 내용은 사이트에서 확인하세요!"
-                st.copy_to_clipboard(summary_text)
+                # 기존 에러 난 줄을 지우고 아래 내용을 넣으세요
+                st.text_area("카톡 공유용 요약 문구 (아래 내용을 복사하세요)", value=summary_text, height=100)
+                st.info("위 박스의 내용을 복사해서 카톡에 붙여넣으세요! 📋")
                 st.success("✅ 분석 완료! 카톡 공유용 요약 문구가 자동으로 복사되었습니다.")
                 # ------------------------------------
 
