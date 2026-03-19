@@ -45,3 +45,9 @@ import google.generativeai as genai
 # 직접 키를 적는 대신 Secrets에서 가져오도록 수정
 api_key = st.secrets["GEMINI_API_KEY"]
 genai.configure(api_key=api_key)
+
+# 분석 결과가 나온 후 (if st.button("결과 분석하기"): 블록 안쪽 맨 밑에)
+summary_text = f"🩺 AI 건강검진 해석 결과\n\n{response.text[:100]}...\n\n더 자세한 내용은 여기서 확인하세요!\n👉 {st.secrets.get('MY_APP_URL', '내 사이트 주소')}"
+
+st.copy_to_clipboard(summary_text)
+st.success("카톡 공유용 요약 문구가 복사되었습니다! 카톡에 붙여넣으세요.")
