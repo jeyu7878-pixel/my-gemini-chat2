@@ -7,7 +7,7 @@ api_key = st.secrets["GEMINI_API_KEY"]
 genai.configure(api_key=api_key)
 
 # 2. 모델 설정
-model = genai.GenerativeModel('gemini-1.5-flash')
+model = genai.GenerativeModel('gemini-2.5-flash')
 
 # 화면 제목
 st.title("🩺 내 손안의 AI 건강검진 해석기")
