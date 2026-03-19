@@ -7,7 +7,7 @@ st.title("🩺 내 손안의 AI 건강검진 해석기")
 st.write("건강검진 결과표 사진을 올리면, AI가 쉽게 설명해 주고 관리 방법을 알려줍니다.")
 
 # 발급받은 API 키 입력 (여기에 구글 AI 스튜디오에서 받은 키를 넣으세요)
-API_KEY = "AIzaSyAJUdWHkSfPj707yiqgl556GJ6IRy5EQQI"
+api_key = st.secrets["GEMINI_API_KEY"]
 genai.configure(api_key=API_KEY)
 
 # 사용할 AI 모델 설정
